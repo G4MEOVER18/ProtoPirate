@@ -111,10 +111,14 @@ ufbt launch
 
 ---
 
-## Companion: G4MEOVER-FW
+## Verwandte Projekte
 
-Optimiert für **[G4MEOVER-FW](https://github.com/G4MEOVER18/G4MEOVER-FW)** Custom Firmware.  
-Für UART-basierte Remote-Steuerung via Heltec ESP32: **[lora-ukfe](https://github.com/G4MEOVER18/lora-ukfe)**
+| Projekt | Beschreibung |
+|---|---|
+| [G4MEOVER-FW](https://github.com/G4MEOVER18/G4MEOVER-FW) | Custom Flipper Zero Firmware — optimale Basis für ProtoPirate |
+| [RollJam](https://github.com/G4MEOVER18/RollJam) | RollJam Attack PoC — CC1101 Jam + Capture + Replay |
+| [RollLab](https://github.com/G4MEOVER18/RollLab) | Rolling Code Vulnerability Lab — Replay, Rollback, Sync-Window Analyse |
+| [lora-ukfe](https://github.com/G4MEOVER18/lora-ukfe) | USB Army Penetrator — UART-Remote via Heltec ESP32 LoRa |
 
 ---
 
