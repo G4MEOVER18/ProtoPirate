@@ -370,7 +370,16 @@ void protopirate_rx_end(ProtoPirateApp* app) {
 
 void protopirate_sleep(ProtoPirateApp* app) {
     furi_check(app);
-    subghz_devices_sleep(app->txrx->radio_device);
+    // Erst idle-stellen: sleep braucht state==SubGhzStateIdle
+    if(app->txrx->txrx_state == ProtoPirateTxRxStateRx) {
+        protopirate_rx_end(app);
+    } else if(app->txrx->radio_device &&
+              app->txrx->txrx_state != ProtoPirateTxRxStateIDLE) {
+        subghz_devices_idle(app->txrx->radio_device);
+        app->txrx->txrx_state = ProtoPirateTxRxStateIDLE;
+    }
+    if(app->txrx->radio_device)
+        subghz_devices_sleep(app->txrx->radio_device);
     app->txrx->txrx_state = ProtoPirateTxRxStateSleep;
 }
 
