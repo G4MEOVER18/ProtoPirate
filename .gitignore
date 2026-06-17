@@ -5,3 +5,7 @@ dist/
 .env
 .ufbt
 .DS_Store
+.vscode/
+*.fap
+ufbt_build.log
+.ufbt/
