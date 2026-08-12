@@ -55,9 +55,12 @@ bool pp_parse_hex_u64_strict(const char* str, uint64_t* out_key) {
 
     uint64_t key = 0;
     uint8_t hex_pos = 0;
-    for(size_t i = 0; str[i] != '\0' && hex_pos < 16; i++) {
+    for(size_t i = 0; str[i] != '\0'; i++) {
         if(str[i] == ' ') {
             continue;
+        }
+        if(hex_pos >= 16) {
+            return false; // ueberzaehliges Zeichen nach 16 Nibbles -> strict ablehnen
         }
 
         uint8_t nibble = 0;
