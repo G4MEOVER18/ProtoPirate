@@ -1,5 +1,7 @@
 # ProtoPirate
 
+[![CI](https://github.com/G4MEOVER18/ProtoPirate/actions/workflows/flipper-fap.yml/badge.svg)](https://github.com/G4MEOVER18/ProtoPirate/actions/workflows/flipper-fap.yml)
+
 > Flipper Zero FAP · Car key fob RF decoder, analyzer & emulator for Sub-GHz
 
 ![Version](https://img.shields.io/badge/version-3.1-blue)
